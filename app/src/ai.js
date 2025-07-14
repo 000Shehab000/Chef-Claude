@@ -10,7 +10,7 @@ Format your response in markdown to make it easier to render to a web page
 `
 
 // Adding HF_ACCESS_TOKEN
-const hf = new HfInference(process.env.HF_ACCESS_TOKEN)
+const hf = new HfInference(process.env.REACT_APP_HF_ACCESS_TOKEN)
 
 export async function getRecipeFromMistral(ingredientsArr) {
   const ingredientsString = ingredientsArr.join(', ')
