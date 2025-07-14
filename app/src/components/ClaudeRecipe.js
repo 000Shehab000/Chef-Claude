@@ -1,8 +1,10 @@
+import Markdown from 'react-markdown'
+
 export default function ClaudeRecipe(props) {
   return (
-    <section>
+    <section className="suggested-recipe-container">
       <h2>Chef Claude Recommends:</h2>
-      <p>{props.recipe}</p>
+      <Markdown>{props.recipe}</Markdown>
     </section>
   )
 }
