@@ -6,7 +6,7 @@ export default function Header() {
     <header>
       <nav>
         <img src={chefLogo} alt="chef logo" />
-        <span>Chef Claude</span>
+        <span>TasteGPT</span>
       </nav>
     </header>
   )
