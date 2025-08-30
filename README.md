@@ -1,5 +1,11 @@
 # 🍳 TasteGPT - AI-Powered Recipe Generator
 
+<div align="center">
+  <img src="app/src/images/TasteGPT.jpg" alt="TasteGPT Logo" width="300" height="auto">
+  <br>
+  <em>Your smart cooking assistant that transforms available ingredients into delicious recipe ideas!</em>
+</div>
+
 [![React](https://img.shields.io/badge/React-19.1.0-blue.svg)](https://reactjs.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
