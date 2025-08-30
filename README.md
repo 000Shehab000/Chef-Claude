@@ -3,7 +3,6 @@
 <div align="center">
   <img src="app/src/images/TasteGPT.jpg" alt="TasteGPT Logo" width="300" height="auto">
   <br>
-  <em>Your smart cooking assistant that transforms available ingredients into delicious recipe ideas!</em>
 </div>
 
 [![React](https://img.shields.io/badge/React-19.1.0-blue.svg)](https://reactjs.org/)
@@ -32,16 +31,6 @@
 - **Styling**: Custom CSS with responsive design
 - **Build Tool**: Create React App
 - **Deployment**: Ready for Vercel, Netlify, or any static hosting
-
-## 📱 Screenshots
-
-### Desktop View
-
-![Desktop View](screenshots/desktop.png)
-
-### Mobile View
-
-![Mobile View](screenshots/mobile.png)
 
 ## 🚀 Getting Started
 
