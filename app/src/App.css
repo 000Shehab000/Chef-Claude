@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #fafaf8;
+}
+
+header {
+  height: 90px;
+  margin: 2px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+header nav img {
+  width: 43px;
+  height: 52px;
+}
+
+header nav span {
+  font-family: Inter;
+  font-weight: 400px;
+  font-size: 32px;
+  line-height: 60px;
+  letter-spacing: -5%;
+  color: #141413;
+}
+
+main {
+  padding: 70px 30px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+main form > input {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  min-width: 150px;
+  max-width: 400px;
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+main form > button {
+  color: #fafaf8;
+  background-color: #141413;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  width: 150px;
+  padding: 12px 16px;
+  transition: all 0.2s ease;
+}
+
+main form > button:hover {
+  background-color: #2d2d2d;
+  transform: translateY(-1px);
+}
+
+.ingredients-section {
+  margin-left: 28px;
+}
+
+ul.ingredients-list {
+  margin-bottom: 48px;
+  padding: 0;
+  list-style: none;
+}
+
+ul.ingredients-list > li {
+  color: #475467;
+  line-height: 28px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.get-recipe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background: #f0efeb;
+  padding: 20px 28px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.get-recipe-container h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+}
+
+.get-recipe-container p {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 20px;
+  margin: 0;
+}
+
+.get-recipe-container button {
+  border: none;
+  border-radius: 6px;
+  background: #d17557;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  color: #fafaf8;
+  padding: 12px 24px;
+  font-family: Inter, sans-serif;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+.get-recipe-container button:hover:not(:disabled) {
+  background: #c06547;
+  transform: translateY(-1px);
+}
+
+.get-recipe-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.get-recipe-container button.loading {
+  background: #9ca3af;
+}
+
+/* Loader */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #d17557;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-container p {
+  color: #6b7280;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.suggested-recipe-container {
+  color: #475467;
+  line-height: 28px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+}
+
+.suggested-recipe-container ul li,
+.suggested-recipe-container ol li {
+  margin-bottom: 8px;
+}
+
+/* Welcome Section */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.bot-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 800px;
+  position: relative;
+}
+
+.bot-icon {
+  width: 80px;
+  height: 96px;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+.speech-bubble {
+  background: white;
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  position: relative;
+  flex-grow: 1;
+  text-align: left;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid white;
+}
+
+.typing-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.typing-content {
+  font-family: inherit;
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: #d17557;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 50px 20px 30px;
+  }
+
+  .bot-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .bot-icon {
+    width: 60px;
+    height: 72px;
+    margin-top: 0;
+  }
+
+  .speech-bubble {
+    text-align: center;
+    padding: 20px 25px;
+  }
+
+  .speech-bubble::before {
+    display: none;
+  }
+
+  .typing-content {
+    font-size: 1rem;
+  }
+
+  main form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main form > input,
+  main form > button {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .get-recipe-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .get-recipe-container button {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .suggested-recipe-container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 40px 15px 20px;
+  }
+
+  .welcome-section {
+    padding: 30px 15px;
+    margin-bottom: 40px;
+  }
+
+  .bot-icon {
+    width: 50px;
+    height: 60px;
+  }
+
+  .speech-bubble {
+    padding: 18px 20px;
+    min-height: 100px;
+  }
+
+  .typing-content {
+    font-size: 0.95rem;
+  }
+
+  header nav span {
+    font-size: 24px;
+  }
+
+  header nav img {
+    width: 35px;
+    height: 42px;
+  }
+}
